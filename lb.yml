@@ -24,7 +24,7 @@
                     state: present
           - name: "copying webpage"
             copy:
-                    content: "hi from {{ ansible_facts['hostname'] }}"
+                    content: "This is the address of node {{ ansible_facts['hostname'] }}"
                     dest: "/var/www/html/index.html"
           - name: "starting httpd services"
             service:
